@@ -1,0 +1,10 @@
+.env
+*.env
+__pycache__/
+*.pyc
+venv/
+.venv/
+AGENTS.md
+/reports/
+tasks/
+OSS_READINESS_REPORT.md

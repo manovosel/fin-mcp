@@ -1,0 +1,18 @@
+[Unit]
+Description=FIN MCP server (reads and plan-amount writes)
+After=network.target
+
+[Service]
+Type=simple
+User=fin-mcp
+Group=fin-mcp
+WorkingDirectory=/opt/fin-mcp
+EnvironmentFile=/etc/fin-mcp/env
+ExecStart=/opt/fin-mcp/.venv/bin/python /opt/fin-mcp/server.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
